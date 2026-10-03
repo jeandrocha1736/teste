@@ -1,0 +1,31 @@
+{
+  "name": "n8n-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server (stdio) que conecta clientes MCP ao n8n via API pública e webhooks",
+  "type": "module",
+  "bin": {
+    "n8n-mcp-server": "build/index.js"
+  },
+  "main": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "start": "node build/index.js",
+    "dev": "tsc --watch",
+    "inspect": "npx @modelcontextprotocol/inspector node build/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
